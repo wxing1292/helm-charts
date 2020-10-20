@@ -78,7 +78,7 @@ spec:
             - name: ES_SCHEME
               value: "{{ $.Values.elasticsearch.scheme }}"
             - name: SERVICES
-              value: {{ $service }}
+              value: "--services={{ $service }}"
             - name: TEMPORAL_STORE_PASSWORD
               valueFrom:
                 secretKeyRef:
